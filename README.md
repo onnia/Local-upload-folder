@@ -1,25 +1,23 @@
 Local upload folder
 ===================
 
+This is application that creates a folder that you can copy your images and its generates picture feed to your browser. 
+The image gallery is using express framework to generate the web gallery to your localhost.
+The images are handled with grunt task runner.
 
+The application need to get up and running wit terminal command of 
 
-        This is application that creates a folder that you can copy your images and its generates picture feed to your browser. 
-    The image gallery is using express framework to generate the web gallery to your localhost.
-    The images are handled with grunt task runner.
-
-    The application need to get up and running wit terminal command of 
 ```grunt
 ```
 
 The default task for grunt is to fireup the express server and start generating image to the gallery
 
-More documentation will be added later
 
 
 
 ### Release schedule
 
-* v0.0.9 14th of October: The the gallery is done 
+* v0.0.9 14th of October: The  gallery is done 
  
 * v0.1.0 21st of October: The gallery is being updated with the images that are copied to the img folder
 
@@ -32,3 +30,6 @@ More documentation will be added later
 * v0.9.4 18th of November: Testing
 
 * V1.0.0 25th of November: Application is done! :D
+
+
+More documentation will be added later as soon there is some thing to documents.
