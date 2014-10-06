@@ -1,13 +1,15 @@
-Local-upload-folder
+Local upload folder
 ===================
 
 
 
-    This is application that creates a folder that you can copy your images and its generates picture feed to your browser. The image gallery is using express framework to generate the web gallery to your localhost.
+        This is application that creates a folder that you can copy your images and its generates picture feed to your browser. 
+    The image gallery is using express framework to generate the web gallery to your localhost.
     The images are handled with grunt task runner.
 
     The application need to get up and running wit terminal command of 
-```grunt```
+```grunt
+```
 
 The default task for grunt is to fireup the express server and start generating image to the gallery
 
