@@ -1,0 +1,14 @@
+{
+  "name": "upload-folder",
+  "version": "0.0.2",
+  "description": "Application for generating images to be viewed at your local webserver",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onnia/Local-upload-folder.git"
+  },
+  "devDependencies": {
+    "express": "^4.9.5",
+    "grunt": "^0.4.5"
+  }
+}
