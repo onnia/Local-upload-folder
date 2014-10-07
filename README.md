@@ -5,7 +5,7 @@ This is application that creates a folder that you can copy your images and its 
 The image gallery is using express framework to generate the web gallery to your localhost.
 The images are handled with grunt task runner.
 
-The application need to get up and running wit terminal command of 
+The application need to get up and running with terminal command of 
 
 ```grunt
 ```
