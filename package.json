@@ -1,14 +1,21 @@
 {
   "name": "upload-folder",
-  "version": "0.0.2",
+  "version": "v0.1.0",
   "description": "Application for generating images to be viewed at your local webserver",
   "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/onnia/Local-upload-folder.git"
   },
   "devDependencies": {
     "express": "^4.9.5",
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "install": "^0.1.7",
+    "jslint": "^0.6.4",
+    "npm": "^2.1.2"
+  },
+  "dependencies": {
+    "jslint": "^0.6.4"
   }
 }
