@@ -1,21 +1,41 @@
-{
-  "name": "upload-folder",
-  "version": "v0.1.0",
-  "description": "Application for generating images to be viewed at your local webserver",
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/onnia/Local-upload-folder.git"
-  },
-  "devDependencies": {
-    "express": "^4.9.5",
-    "grunt": "^0.4.5",
-    "install": "^0.1.7",
-    "jslint": "^0.6.4",
-    "npm": "^2.1.2"
-  },
-  "dependencies": {
-    "jslint": "^0.6.4"
-  }
-}
+        {
+          "name": "upload-folder",
+          "description": "Application for generating images to be viewed at your local webserver",
+          "version": "v0.1.4",
+          "author": {
+            "name": "Onnia",
+            "email": "kualtonen@gmail.com"
+          },
+          "contributors": [
+            {
+              "name": "Onni Aaltonen",
+              "email": "kualtonen@gmail.com"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/onnia/Local-upload-folder.git"
+          },
+          "main": "index",
+          "man":"README.md",
+          "directories": {
+             "upload": "./upload"
+           },
+          "devDependencies": {
+            "express": "^4.9.5",
+            "grunt": "^0.4.5",
+            "install": "^0.1.7",
+            "jslint": "^0.6.4",
+            "npm": "^2.1.2"
+          },
+          "dependencies": {
+            "jslint": "^0.6.4"
+          },
+          "license": "MIT",
+          "scripts": {
+             "test": "echo Iso KALA",
+             "start": "node index.js",
+             "predeploy": "echo im about to deploy",
+             "postdeploy": "echo ive deployed"
+          }
+        }
