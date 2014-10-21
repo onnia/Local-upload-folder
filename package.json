@@ -1,7 +1,7 @@
  {
           "name": "app",
           "description": "Application for generating images to be viewed at your local webserver",
-          "version": "0.1.4",
+          "version": "0.1.5",
           "private": true,
           "author": {
             "name": "Onnia",

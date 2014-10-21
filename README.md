@@ -7,8 +7,16 @@ The images are handled with grunt task runner.
 
 The application need to get up and running with terminal command of 
 
-```grunt
+To install the dependencies use
+
+```npm install
 ```
+after that hit
+
+```npm start
+```
+
+The the image gallery is running at localhost:1500
 
 The default task for grunt is to fireup the express server and start generating image to the gallery
 
