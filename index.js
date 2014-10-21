@@ -4,5 +4,5 @@
  * and open the template in the editor.
  */
 
-module.exports = require('./app/lib/upload-folder.js');
+module.exports = require('./app/app.js');
 
