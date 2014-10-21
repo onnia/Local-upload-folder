@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/package.json</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/node_modules/grunt/internal-tasks/bump.js</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/index.js</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/node_modules/grunt/lib/grunt/help.js</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/.gitignore</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/node_modules/grunt/package.json</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/node_modules/grunt/internal-tasks/subgrunt.js</file>
+            <file>file:/Users/onniaaltonen/nodejs/Local-upload-folder/app/lib/upload-folder.js</file>
+        </group>
     </open-files>
 </project-private>
