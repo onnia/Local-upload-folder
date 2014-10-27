@@ -6,9 +6,20 @@
 
 'use strict';
 
-var upload = require('upload-folder.js');
+var pjson = require('../../package.json');
+//Help text
+var help = 'To get the app up and going run type "npm start"';
+var nothelp = 'Dont you know how to write? Just type "help", please!';
 
-// Nodejs libs.
-var path = require('path');
-
-console.log('HELP YOURSELF');
+console.log(''); 
+console.log(pjson.name + ' current version of ' + pjson.version );
+console.log('');  
+console.log(pjson.name + ' - ' + pjson.description);
+console.log('');  
+console.log('application is created by '+ pjson.author.name);
+console.log('');  
+console.log(help);  
+console.log('');  
+console.log('Check out for readme file for more info'); 
+console.log('');
+console.log('Most common problem right now is with the usage of the port. I you get some error message i recomend you to change the port');
