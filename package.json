@@ -1,50 +1,55 @@
- {
-          "name": "app",
-          "description": "Application for generating images to be viewed at your local webserver",
-          "version": "0.1.5",
-          "private": true,
-          "author": {
-            "name": "Onnia",
-            "email": "kualtonen@gmail.com"
-          },
-          "contributors": [
-            {
-              "name": "Onni Aaltonen",
-              "email": "kualtonen@gmail.com"
-            }
-          ],
-          "repository": {
-            "type": "git",
-            "url": "https://github.com/onnia/Local-upload-folder.git"
-          },
-          "main": "index",
-          "directories": {
-             "upload": "./upload"
-           },
-          "devDependencies": {
-            "express": "^4.0.0",
-            "grunt": "^0.4.5",
-            "install": "^0.1.7",
-            "jslint": "^0.6.4",
-            "npm": "^2.1.2"
-          },
-          "dependencies": {
-            "jslint": "^0.6.4",
-            "express": "~4.0.0",
-            "serve-favicon": "~2.1.3",
-            "morgan": "~1.0.0",
-            "cookie-parser": "~1.0.1",
-            "body-parser": "~1.0.0",
-            "debug": "~0.7.4",
-            "jade": "~1.3.0",
-            "mongodb": "*",
-            "monk": "*"
-          },
-          "license": "MIT",
-          "scripts": {
-             "test": "echo Iso KALA",
-             "start": "node ./app/bin/www",
-             "predeploy": "echo im about to deploy",
-             "postdeploy": "echo ive deployed"
-          }
-        }
+{
+  "name": "upload-folder",
+  "description": "Application for generating images to be viewed at your local webserver",
+  "version": "0.1.5",
+  "private": true,
+  "author": {
+    "name": "Onnia",
+    "email": "kualtonen@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Onni Aaltonen",
+      "email": "kualtonen@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onnia/Local-upload-folder.git"
+  },
+  "main": "index",
+  "directories": {
+    "upload": "./upload"
+  },
+  "devDependencies": {
+    "express": "^4.0.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "install": "^0.1.7",
+    "jslint": "^0.6.4",
+    "npm": "^2.1.2",
+    "optimist": "^0.6.1"
+  },
+  "dependencies": {
+    "jslint": "^0.6.4",
+    "express": "~4.0.0",
+    "serve-favicon": "~2.1.3",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0",
+    "mongodb": "*",
+    "monk": "*"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "echo Iso KALA",
+    "start": "node ./app/bin/www",
+    "predeploy": "console.log('Moi')",
+    "postdeploy": "console.log('Moi')"
+  }
+}
