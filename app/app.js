@@ -5,10 +5,32 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//some setttings
+var pjson = require('./package.json');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+// module.exports = require('./app/app.js');
+// Read package.json file
+// var pjson = require('package.json')
+var run = pjson.scripts.start;
+
+// Take the argument 
+var argument = process.argv[2];
+var nothelp = 'use argument help';
+
+if (argument === 'help' || argument === 'h' || argument === '-h') {
+    //fetch help variables file
+    require('./lib/help.js');
+    console.log('Help us');
+  } if (argument === false) {
+    console.log(nothelp);
+ }
+//end help script
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

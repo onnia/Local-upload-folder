@@ -48,7 +48,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo Iso KALA",
-    "start": "node ./app/bin/www",
+    "start": "node ./bin/www",
     "predeploy": "console.log('Moi')",
     "postdeploy": "console.log('Moi')"
   }

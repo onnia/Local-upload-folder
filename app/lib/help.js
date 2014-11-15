@@ -6,7 +6,7 @@
 
 'use strict';
 
-var pjson = require('../../package.json');
+var pjson = require('../package.json');
 //Help text
 var help = 'To get the app up and going run type "npm start"';
 var nothelp = 'Dont you know how to write? Just type "help", please!';

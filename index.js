@@ -11,6 +11,8 @@ var run = pjson.scripts.start;
 
 // Take the argument 
 var argument = process.argv[2];
+var nothelp = 'use argument help';
+
 
 if (argument === 'help' || argument === 'h') {
     //fetch help variables file
