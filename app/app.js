@@ -25,11 +25,9 @@ var nothelp = 'use argument help';
 if (argument === 'help' || argument === 'h' || argument === '-h') {
     //fetch help variables file
     require('./lib/help.js');
-    console.log('Help us');
   } if (argument === false) {
     console.log(nothelp);
  }
-//end help script
 
 
 // view engine setup
