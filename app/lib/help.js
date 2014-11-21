@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-'use strict';
 
 var pjson = require('../package.json');
 //Help text
