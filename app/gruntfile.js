@@ -14,31 +14,31 @@ module.exports = function(grunt) {
     },
     env: {
       coverage: {
-        APP_DIR_FOR_CODE_COVERAGE: '../test/coverage/instrument/app/'
+        APP_DIR_FOR_CODE_COVERAGE: '../tests/coverage/instrument/app/'
       }
     },
     instrument: {
-      files: 'app/tests/*.js',
+      files: 'tests/*.js',
       options: {
         lazy: true,
-        basePath: 'test/instrument/'
+        basePath: 'tests/instrument/'
       }
     },
     storeCoverage: {
       options: {
-        dir: 'test/reports'
+        dir: 'tests/reports'
       }
     },
     makeReport: {
-      src: 'test/reports/**/*.json',
+      src: 'tests/reports/**/*.json',
       options: {
         type: 'lcov',
-        dir: 'test/reports',
+        dir: 'tests/reports',
         print: 'detail'
       }
     },
     jshint: {
-       all: ['Gruntfile.js', 'app.js', 'tests/*.js', 'lib/*.js']
+       all: ['Gruntfile.js', 'app.js', 'tests/*.js', 'lib/*.js', 'routes/*.js']
     },
     qunit: {
        files: ['tests/*.js']
@@ -59,7 +59,14 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 
 // Register tasks use them with grunt 'taskname'
 grunt.registerTask('hint', ['jshint']);
-grunt.registerTask('test', ['qunit']);
-grunt.registerTask('default', ['concat']);
+
+grunt.registerTask('test', ['qunit', 'jshint'], function() {
+  grunt.log.write('Testing and hinting...');   
+});
+
+grunt.registerTask('default', ['concat'], function() {
+  grunt.log.write('Logging some stuff...').ok();   
+});
+
 grunt.registerTask('cover', ['env:coverage','instrument', 'storeCoverage', 'makeReport']);
 };
