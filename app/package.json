@@ -53,9 +53,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "istanbul cover tests/*.js",
+    "test": "grunt test",
     "start": "node ./bin/www",
     "predeploy": "console.log('Moi')",
-    "postdeploy": "console.log('Moi')"
+    "postdeploy": "console.log('Moi')",
+    "coverage": "istanbul cover ./node_modules/nodeunit/bin/nodeunit -- tests",
+    "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls"
   }
 }
