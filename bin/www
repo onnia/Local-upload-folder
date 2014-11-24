@@ -2,7 +2,7 @@
 var debug = require('debug')('app');
 var app = require('../app');
 
-var portof = '1000';
+var portof = '1024';
 
 app.set('port', process.env.PORT || portof);
 
