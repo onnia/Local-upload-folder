@@ -28,6 +28,11 @@ module.exports = function(grunt) {
         print: 'detail'
       }
     },
+    shell: {
+        start: {
+            command: 'node ./bin/www'
+        }
+    },
     /* Defines all files to be tested*/
     jshint: {
        all: ['Gruntfile.js', 'app.js', 'tests/*.js', 'lib/*.js', 'routes/*.js']
@@ -61,7 +66,7 @@ module.exports = function(grunt) {
         scripts: {
             /* Folder to watch */    
             files: ['upload/*'],
-            tasks: ['sync:main', 'copy:main'],
+            tasks: ['sync:main', 'copy:main', 'shell:start'],
             options: {
                 spawn: false,
                 reload: true
@@ -72,6 +77,7 @@ module.exports = function(grunt) {
 
 grunt.loadNpmTasks('grunt-env');
 grunt.loadNpmTasks('grunt-sync');
+grunt.loadNpmTasks('grunt-shell');
 grunt.loadNpmTasks('grunt-istanbul');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-qunit');
@@ -81,14 +87,12 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 
 // Registered tasks grunt tasks
 grunt.registerTask('hint', ['jshint']);
+grunt.registerTask('default', ['shell:start']);
 grunt.registerTask('files', ['sync:main']);
 grunt.registerTask('test', ['qunit', 'jshint'], function() {
   grunt.log.write('Testing and hinting...');   
 });
   
-grunt.registerTask('default', ['watch', 'sync:main'], function() {
-   grunt.log.write('Watching upload folder for file changes...');   
-});
 
 grunt.registerTask('cover', ['env:coverage','instrument', 'storeCoverage', 'makeReport']);
 };
