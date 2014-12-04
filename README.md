@@ -1,4 +1,4 @@
-!https://travis-ci.org/onnia/Local-upload-folder.svg?branch=master!:https://travis-ci.org/onnia/Local-upload-folder
+[![Build Status](https://travis-ci.org/onnia/Local-upload-folder.svg?branch=master)](https://travis-ci.org/onnia/Local-upload-folder)
 
 Local upload folder
 ===================
