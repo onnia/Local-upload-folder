@@ -18,7 +18,17 @@ after that hit
 ```npm start
 ```
 
-The the image gallery is running at localhost:1500
+Tasks to run right now are: 
+```
+Grunt watch
+
+Grunt test
+
+Grunt
+
+```
+
+The the image gallery is running at localhost:1024
 
 The default task for grunt is to fireup the express server and start generating image to the gallery
 
