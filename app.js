@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var serveIndex = require('serve-index');
 
 //some setttings
 var pjson = require('./package.json');
@@ -14,8 +15,6 @@ var users = require('./routes/users');
 var app = express();
 
 // module.exports = require('./app/app.js');
-// Read package.json file
-// var pjson = require('package.json')
 var run = pjson.scripts.start;
 
 // Take the argument 
@@ -41,6 +40,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+/* Index images from public upload folder*/
+app.use('/img/upload', serveIndex('public/img/upload', {'icons': false}));
 
 app.use('/', routes);
 app.use('/users', users);
