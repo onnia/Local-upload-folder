@@ -1,14 +1,12 @@
 var express = require('express');
 var router = express.Router();
+ // express name to use imported form package.json file
+var pjson = require('../package.json');
 
-/* GET Hello World page. */
-router.get('/helloworld', function(req, res) {
-    res.render('helloworld', { title: 'Hello, World!' })
-});
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: pjson.name });
 });
 
 module.exports = router;
