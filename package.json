@@ -1,9 +1,9 @@
 {
   "name": "upload-folder",
   "description": "Application for generating images to be viewed at your local webserver",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "private": true,
-  "port": "1040",
+  "port": "1050",
   "author": {
     "name": "Onnia",
     "email": "kualtonen@gmail.com"

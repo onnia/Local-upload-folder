@@ -20,15 +20,20 @@ after that hit
 
 Tasks to run right now are: 
 ```
-Grunt watch
+grunt files
 
-Grunt test
+grunt remove
+
+grunt cover
+
+grunt test
 
 Grunt
 
 ```
 
-The the image gallery is running at localhost:1024
+The the image gallery is running at localhost:1050
+Port can be configured from package.json file 
 
 The default task for grunt is to fireup the express server and start generating image to the gallery
 
