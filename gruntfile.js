@@ -4,11 +4,13 @@ module.exports = function (grunt) {
         /* Task for starting the express server */
         shell: {
             start: {
+                /* Starting expression*/
                 command: 'node ./bin/www'
             },
             clear: {
+                /* Deleting the public folder content*/
                 command: 'rm -rf ./public/img/upload/*'
-            }      
+            }
         },
         env: {
             coverage: {
@@ -63,11 +65,11 @@ module.exports = function (grunt) {
                 files: [{
                         cwd: 'upload',
                         src: [
-                            '**', '*.JPG', '*.jpg' /* Include everything */
+                            '**'/* Include everything */
                         ],
-                        dest: 'public/img/upload/'
+                        dest: 'public/img/upload'
                     }],
-                tasks: ['watch'],
+                //tasks: ['watch'],
                 pretend: true, // Don't do any IO. Before you run the task with `updateAndDelete` PLEASE MAKE SURE it doesn't remove too much.
                 verbose: true, // Display log messages when copying files
                 updateAndDelete: true // Remove all files from dest that are not found in src
@@ -83,9 +85,10 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 /* Folder to watch */
-                files: ['upload/*.*'],
+                files: ['upload/*'],
+                tasks: ['sync:main', 'copy:main'],
                 options: {
-                    spawn: false,
+                    spawn: true,
                     reload: true
                 }
             }
@@ -112,7 +115,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    // grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-coveralls');
 
@@ -122,7 +125,7 @@ module.exports = function (grunt) {
     // Testing the codes syntax
     grunt.registerTask('hint', ['jshint']);
     // Files will be copied to public folder
-    grunt.registerTask('copy', ['sync:main', 'copy:main']);
+    grunt.registerTask('files', ['sync:main', 'copy:main']);
     // removing files from public images folder
     grunt.registerTask('remove', ['shell:clear', 'remove-message']);
     // Code coverage
@@ -145,4 +148,3 @@ module.exports = function (grunt) {
         grunt.log.write('Images removed from public folder');
     });
 };
-    
