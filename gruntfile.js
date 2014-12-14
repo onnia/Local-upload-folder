@@ -115,7 +115,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-coveralls');
 
@@ -125,7 +124,7 @@ module.exports = function (grunt) {
     // Testing the codes syntax
     grunt.registerTask('hint', ['jshint']);
     // Files will be copied to public folder
-    grunt.registerTask('files', ['sync:main', 'copy:main']);
+    grunt.registerTask('files', ['sync:main', 'copy:main', 'watch-message', 'watch']);
     // removing files from public images folder
     grunt.registerTask('remove', ['shell:clear', 'remove-message']);
     // Code coverage
