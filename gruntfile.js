@@ -10,6 +10,10 @@ module.exports = function (grunt) {
             clear: {
                 /* Deleting the public folder content*/
                 command: 'rm -rf ./public/img/upload/*'
+            },
+            helpMe: {
+                /* Help text*/
+                command: 'node app.js help'
             }
         },
         env: {
@@ -129,6 +133,9 @@ module.exports = function (grunt) {
     grunt.registerTask('remove', ['remove-message', 'shell:clear',]);
     // Code coverage
     grunt.registerTask('server', ['server-message', 'shell:start']);
+    // Help command
+    grunt.registerTask('help', ['shell:helpMe']);
+    grunt.registerTask('h', ['shell:helpMe']);
     // Code coverage
     grunt.registerTask('cover', ['env:coverage', 'instrument', 'storeCoverage', 'makeReport']);
     // Default test task
