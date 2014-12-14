@@ -22,6 +22,8 @@ Tasks to run right now are:
 ```
 grunt files
 
+grunt server
+
 grunt remove
 
 grunt cover

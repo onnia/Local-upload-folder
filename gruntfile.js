@@ -126,7 +126,9 @@ module.exports = function (grunt) {
     // Files will be copied to public folder
     grunt.registerTask('files', ['sync:main', 'copy:main', 'watch-message', 'watch']);
     // removing files from public images folder
-    grunt.registerTask('remove', ['shell:clear', 'remove-message']);
+    grunt.registerTask('remove', ['remove-message', 'shell:clear',]);
+    // Code coverage
+    grunt.registerTask('server', ['server-message', 'shell:start']);
     // Code coverage
     grunt.registerTask('cover', ['env:coverage', 'instrument', 'storeCoverage', 'makeReport']);
     // Default test task
