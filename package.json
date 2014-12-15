@@ -1,9 +1,9 @@
 {
   "name": "upload-folder",
   "description": "Application for generating images to be viewed at your local webserver",
-  "version": "0.1.9",
-  "private": true,
-  "port": "1080",
+  "version": "0.2.0",
+  "private": false,
+  "port": "1085",
   "author": {
     "name": "Onnia",
     "email": "kualtonen@gmail.com"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/onnia/Local-upload-folder.git"
   },
-  "main": "index",
+  "main": "Gruntfile.js",
   "directories": {
     "upload": "./upload"
   },
