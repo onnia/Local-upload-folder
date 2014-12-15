@@ -11,39 +11,61 @@ The images are handled with grunt task runner.
 The application need to get up and running with terminal command of 
 
 To install the dependencies use
-
-```npm install
 ```
+npm install
+```
+
+
 after that hit
-
-```npm start
+```
+npm start
 ```
 
-Tasks to run right now are: 
+After that you can copy images to upload directory
+
+Other tasks to run right now are: 
+
+
+To sync files between the public folder and upload folder
 ```
 grunt files
+```
 
+To run express server without syncing the photos 
+```
 grunt server
 
+```
+
+To delete images from public folder
+```
 grunt remove
+```
 
-grunt cover
-
-grunt test
-
-Grunt
+To check code cover status
 
 ```
+grunt cover
+```
+
+To check the code for typos
+```
+grunt test
+```
+
+The default task for grunt is to fireup the express server and start generating image to the gallery
+```
+grunt
+```
+
 
 The the image gallery is running at localhost:1050
 Port can be configured from package.json file 
 
-The default task for grunt is to fireup the express server and start generating image to the gallery
+The most comman error is  "EADDRINUSE" that can be handled by changing the default port from package.json file
 
 
-
-
-### Release schedule
+### Original release schedule
 
 * v0.0.9 14th of October: The  gallery is done 
  
