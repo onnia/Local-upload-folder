@@ -40,7 +40,11 @@ module.exports = function (grunt) {
         coveralls: {
             options: {
                 src: 'instrument/reports/lcov.info',
-                force: false
+                force: true
+            },
+            your_target: {
+                // Target-specific LCOV coverage file
+                src: 'instrument/reports/*.info'
             }
         },
         cover: {
