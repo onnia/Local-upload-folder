@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/onnia/Local-upload-folder.svg?branch=master)](https://travis-ci.org/onnia/Local-upload-folder)
+[![Coverage Status](https://coveralls.io/repos/onnia/Local-upload-folder/badge.png)](https://coveralls.io/r/onnia/Local-upload-folder)
 
 Local upload folder
 ===================
