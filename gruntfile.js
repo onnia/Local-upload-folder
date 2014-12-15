@@ -18,26 +18,21 @@ module.exports = function (grunt) {
         },
         env: {
             coverage: {
-                APP_DIR_FOR_CODE_COVERAGE: '../tests/coverage/instrument/app/'
+                APP_DIR_FOR_CODE_COVERAGE: '../instrument/tests/'
             }
         },
         instrument: {
             files: 'tests/*.js',
             options: {
                 lazy: true,
-                basePath: 'tests/instrument/'
-            }
-        },
-        storeCoverage: {
-            options: {
-                dir: 'tests/reports'
+                basePath: 'instrument/'
             }
         },
         makeReport: {
-            src: 'tests/reports/**/*.json',
+            src: 'instrument/reports/**/*.json',
             options: {
                 type: 'lcov',
-                dir: 'tests/reports',
+                dir: 'instrument/reports',
                 print: 'detail'
             }
         },
@@ -45,7 +40,7 @@ module.exports = function (grunt) {
         coveralls: {
             options: {
                 // LCOV coverage file relevant to every target
-                src: 'coverage-results/lcov.info',
+                src: 'instrument/reports/lcov.info',
                 // When true, grunt-coveralls will only print a warning rather than
                 // an error, to prevent CI builds from failing unnecessarily (e.g. if
                 // coveralls.io is down). Optional, defaults to false.
@@ -53,9 +48,17 @@ module.exports = function (grunt) {
             },
             your_target: {
                 // Target-specific LCOV coverage file
-                src: 'coverage-results/extra-results-*.info'
+                src: 'instrument/reports/lcov.info'
             }
         },
+        cover: {
+            compile: {
+                files: {
+                    'instrument/tests/*.js': ['tests/*.js'],
+                    'instrument/*/*.js': [ 'tests/*/*.js']
+                    }
+                  }
+                },
         /* Defines all files to be hinted*/
         jshint: {
             all: ['Gruntfile.js', 'app.js', 'tests/*.js', 'lib/*.js', 'routes/*.js']
@@ -121,6 +124,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-coveralls');
+    grunt.loadNpmTasks('grunt-coverjs');
 
     // Registered tasks grunt tasks that can be used
     // For running express and watch at the same time
@@ -137,7 +141,7 @@ module.exports = function (grunt) {
     grunt.registerTask('help', ['shell:helpMe']);
     grunt.registerTask('h', ['shell:helpMe']);
     // Code coverage
-    grunt.registerTask('cover', ['env:coverage', 'instrument', 'storeCoverage', 'makeReport']);
+    grunt.registerTask('coverr', ['cover', 'env:coverage', 'instrument', 'makeReport']);
     // Default test task
     grunt.registerTask('test', ['qunit', 'jshint'], function () {
         grunt.log.write('Testing and hinting...');
