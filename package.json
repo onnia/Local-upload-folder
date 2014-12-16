@@ -3,7 +3,7 @@
   "description": "Application for generating images to be viewed at your local webserver",
   "version": "0.2.0",
   "private": false,
-  "port": "1085",
+  "port": "1050",
   "author": {
     "name": "Onnia",
     "email": "kualtonen@gmail.com"

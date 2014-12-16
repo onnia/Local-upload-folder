@@ -58,7 +58,7 @@ The default task for grunt is to fireup the express server and start generating 
 grunt
 ```
 
-
+There is one test file the easiest method to test out the app is to run "grunt" and duplicate the test file at upload folder
 The the image gallery is running at localhost:1050
 Port can be configured from package.json file 
 
