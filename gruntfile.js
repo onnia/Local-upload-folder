@@ -60,8 +60,8 @@ module.exports = function (grunt) {
             all: ['Gruntfile.js', 'app.js', 'tests/*.js', 'lib/*.js', 'routes/*.js']
         },
         /* nodeunit tests*/
-        qunit: {
-            files: ['tests/*.js']
+        nodeunit: {
+            files: ['tests/index_spec.js']
         },
         sync: {
             main: {
@@ -116,7 +116,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-parallel');
     grunt.loadNpmTasks('grunt-istanbul');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-coveralls');
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
     grunt.registerTask('help', ['shell:helpMe']);
     grunt.registerTask('h', ['shell:helpMe']);
     // Code coverage
-    grunt.registerTask('coverr', ['cover', 'env:coverage', 'instrument', 'makeReport']);
+    grunt.registerTask('coverr', ['cover', 'env:coverage', 'instrument', 'nodeunit', 'makeReport']);
     // Default test task
     grunt.registerTask('test', ['qunit', 'jshint'], function () {
         grunt.log.write('Testing and hinting...');

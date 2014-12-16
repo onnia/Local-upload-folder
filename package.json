@@ -3,7 +3,7 @@
   "description": "Application for generating images to be viewed at your local webserver",
   "version": "0.2.0",
   "private": false,
-  "port": "1050",
+  "port": "1090",
   "author": {
     "name": "Onnia",
     "email": "kualtonen@gmail.com"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/onnia/Local-upload-folder.git"
   },
-  "main": "Gruntfile.js",
+  "main": "app.js",
   "directories": {
     "upload": "./upload"
   },
@@ -30,7 +30,6 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-qunit": "^0.5.2",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-coveralls": "^1.0.0",
@@ -65,7 +64,7 @@
   "scripts": {
     "test": "grunt test",
     "start": "grunt",
-    "coverage": "grunt coverr",
+    "coverage": " istanbul cover node_modules/grunt-contrib-nodeunit/node_modules/nodeunit/bin/nodeunit -- tests",
     "coveralls": "grunt coveralls"
   }
 }
